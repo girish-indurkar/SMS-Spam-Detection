@@ -79,40 +79,28 @@ The project uses several text-processing techniques to convert raw SMS messages 
 
 Text data is transformed into numerical features so that machine learning algorithms can process it.
 
-```text
-Raw SMS
-   ↓
-Text Cleaning
-   ↓
-Tokenization
-   ↓
-Feature Extraction
-   ↓
-Numerical Representation
-   ↓
-Machine Learning Model
+```mermaid
+flowchart LR
+    A[Cleaned SMS] --> B[Tokenization]
+    B --> C[Build Vocabulary]
+    C --> D[Count Vectorization]
+    D --> E[Feature Matrix]
+    E --> F[ML Model]
 ```
-
 ---
 
 ## 🤖 Model
 
 The processed SMS data is used to train a **Machine Learning classification model** that predicts:
 
-```text
-Input SMS
-    ↓
-NLP Preprocessing
-    ↓
-Feature Extraction
-    ↓
-Trained ML Model
-    ↓
-┌───────────────┐
-│ Spam or Ham ? │
-└───────────────┘
+```mermaid
+flowchart LR
+    A[Cleaned SMS] --> B[Tokenization]
+    B --> C[Build Vocabulary]
+    C --> D[Count Vectorization]
+    D --> E[Feature Matrix]
+    E --> F[ML Model]
 ```
-
 ---
 
 ## 🧪 Example Predictions
