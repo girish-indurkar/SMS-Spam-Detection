@@ -31,31 +31,20 @@ The primary goal of this project is to build a machine learning model that can u
 > 💡 The model learns from previously labeled SMS messages and uses those patterns to classify unseen messages.
 
 ---
-
 ## 🔄 Machine Learning Workflow
 
-```text
-                📩 SMS Dataset
-                     │
-                     ▼
-              🧹 Data Cleaning
-                     │
-                     ▼
-            ✂️ Text Preprocessing
-                     │
-                     ▼
-             🔤 Feature Extraction
-                     │
-                     ▼
-             🤖 Model Training
-                     │
-                     ▼
-              📊 Model Evaluation
-                     │
-                     ▼
-          🚨 Spam / ✅ Ham Prediction
+```mermaid
+flowchart TD
+    A[SMS Dataset] --> B[Data Cleaning]
+    B --> C[Text Preprocessing]
+    C --> D[Feature Extraction]
+    D --> E[Train ML Model]
+    E --> F[Model Evaluation]
+    F --> G[New SMS]
+    G --> H{Prediction}
+    H -->|Spam| I[Spam]
+    H -->|Ham| J[Ham]
 ```
-
 ---
 
 ## 🛠️ Technologies & Libraries
